@@ -14,7 +14,7 @@ scrapeIt("http://www.itsmarta.com/parking.aspx", {
         }
     },
     stations: {
-        // Possible change to reduce breakage: get closer using existing class='introduction' on surrounding table tag.
+        // Possible change to reduce breakage: get closer using existing class='introduction' on div surrounding table tag.
         listItem: "#ctl00_ContentPlaceHolder1_cntpolice > div > div > div > div > table:nth-child(5) > tbody > tr > td"
       , convert: function(x) {
         return x.trim();
