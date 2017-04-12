@@ -40,9 +40,9 @@ r = re.compile('<\/b>([^\s]+)\s+(.*)(AM|PM)')
 # Search all of the body of HTML
 m = r.search(str(soup.body))
 # assign the Date to d, time to t, and the Period (AM/PM) to p
-d = m[1].strip()
-t = m[2].strip()
-p = m[3].strip()
+d = m.group(1).strip()
+t = m.group(2).strip()
+p = m.group(3).strip()
 
 
 date = datetime.strptime("%s %s %s" % (d, t, p), "%m/%d/%Y %I:%M %p")
