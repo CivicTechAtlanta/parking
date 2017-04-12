@@ -2,6 +2,10 @@ from bs4 import BeautifulSoup
 import requests
 import re
 from datetime import datetime
+import config
+import s3
+
+vars = config.get_config()
 
 url = "http://www.itsmarta.com/parking.aspx"
 stations = ['North Springs', 'Sandy Springs', 'Dunwoody', 'Doraville',
@@ -50,6 +54,7 @@ s["last modified"] = date.strftime('%s')
 
 print(s)
 
+s3.push_to_s3("status", str(s))
 
 ## todo: ensure all stations are added to dictionary
 ## todo: add timezone to ensure correct epoch time
