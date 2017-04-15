@@ -67,7 +67,7 @@ scrapeIt("http://www.itsmarta.com/parking.aspx", {
         }
     },
     rows: {
-        listItem: "#ctl00_ContentPlaceHolder1_cntpolice > div > div > div > div > table:nth-child(5) > tbody > tr > td"
+        listItem: "div.l-main > div > div > table:nth-child(5) > tbody > tr > td"
       , convert: function(x) {
         return x.trim();
       }
