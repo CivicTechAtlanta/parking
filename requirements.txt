@@ -1,0 +1,5 @@
+beautifulsoup4==4.5.3
+boto==2.46.1
+bs4==0.0.1
+requests==2.13.0
+wheel==0.24.0
